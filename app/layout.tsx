@@ -1,4 +1,5 @@
-import "./globals.css";
+import Navbar from "./Navbar";
+import "../styles/globals.css";
 
 export default function RootLayout({
   children,
@@ -9,8 +10,10 @@ export default function RootLayout({
     <html>
       <head></head>
       <body>
-        <header></header>
-        <main>{children}</main>
+        <header>
+          <Navbar />
+        </header>
+        <main className="p-4">{children}</main>
         <footer></footer>
       </body>
     </html>
