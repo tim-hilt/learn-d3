@@ -17,7 +17,7 @@ const menuItems = [
 
 export default function Navbar() {
   return (
-    <div className="navbar bg-base-100">
+    <nav className="navbar bg-base-100">
       <div className="flex-1">
         <Link href="/" className="btn-ghost btn text-xl normal-case">
           d3 Examples
@@ -34,6 +34,6 @@ export default function Navbar() {
           })}
         </ul>
       </div>
-    </div>
+    </nav>
   );
 }
