@@ -1,17 +1,34 @@
-const menuItems = ["Item 1", "Item 2", "Item 3"];
+import Link from "next/link";
+
+const menuItems = [
+  {
+    name: "Item 1",
+    link: "/item1",
+  },
+  {
+    name: "Item 2",
+    link: "/item2",
+  },
+  {
+    name: "Item 3",
+    link: "/item3",
+  },
+];
 
 export default function Navbar() {
   return (
     <div className="navbar bg-base-100">
       <div className="flex-1">
-        <a className="btn btn-ghost normal-case text-xl">d3 Examples</a>
+        <Link href="/" className="btn-ghost btn text-xl normal-case">
+          d3 Examples
+        </Link>
       </div>
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1">
           {menuItems.map((i) => {
             return (
-              <li key={i}>
-                <a>{i}</a>
+              <li key={i.link}>
+                <Link href={i.link}>{i.name}</Link>
               </li>
             );
           })}
