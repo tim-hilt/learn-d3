@@ -19,9 +19,10 @@ This repository contains my journey of learning d3. Apart from d3, a few other t
 
 ```sh
 # Run from project root
-docker build -t learn-d3 .
-kind load docker-image learn-d3
-helm install learn-d3 --set name=learn-d3 ./helm/
+export NAME=learn-d3
+docker build -t $name .
+kind load docker-image $name
+helm install learn-d3 --set name=$name ./helm/
 # --set flag not needed if docker-image built with -t learn-d3 (default)
 ```
 
