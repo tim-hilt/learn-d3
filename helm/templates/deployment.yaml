@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.name }}
+  labels:
+    app: {{ .Values.name }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      role: {{ .Values.name }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.name }}
+        role: {{ .Values.name }}
+    spec:
+      containers:
+        - name: {{ .Values.name }}
+          resources:
+            limits:
+              memory: {{ .Values.memlimit }}
+          imagePullPolicy: IfNotPresent
+          image: learn-d3
+          ports:
+            - containerPort: {{ .Values.port }}
