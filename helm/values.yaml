@@ -1,10 +1,9 @@
-name: nextjs-poc
+name: learn-d3
 
 docker:
   registry: ""
-  image: learn-d3
-  tag: ""
+  tag: latest
 
 memlimit: 500M
 port: 3000
-host: next.localhost
+host: localhost

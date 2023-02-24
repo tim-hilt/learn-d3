@@ -21,6 +21,6 @@ spec:
             limits:
               memory: {{ .Values.memlimit }}
           imagePullPolicy: IfNotPresent
-          image: learn-d3
+          image: "{{ .Values.docker.registry }}{{ .Values.name }}:{{ .Values.docker.tag }}"
           ports:
             - containerPort: {{ .Values.port }}
