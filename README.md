@@ -10,7 +10,7 @@ This repository contains my journey of learning d3. Apart from d3, a few other t
 
 ### Prerequisites
 
-- running kind-cluster with `ingress.nginx` preconfigured
+- running kind-cluster with `ingress.nginx` preconfigured (automated with https://github.com/tim-hilt/lcb)
 - docker-setup
 - kubectl
 - helm
